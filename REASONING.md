@@ -68,7 +68,7 @@ The recursive clause of ancestor_r comes first, so the query runs parent(tom, P)
 
 ## P10
 
-Write one to three sentences here. Name the rule that fixes each field.
+The base clause of ancestor is tried first, and parent(X, jim) matches parent(pat, jim), so first is X=pat. The recursive clause then runs parent(X, P) and ancestor(P, jim) through the parent facts top to bottom, where P=liz (parent(tom, liz)) fails because liz has no children, P=bob (parent(tom, bob)) succeeds through pat so X=tom (second), and P=pat (parent(bob, pat)) succeeds by its base clause so X=bob. The remaining parent facts lead to ann, jim, or sue, which can't reach jim, so the order is pat, tom, bob and the count is 3.
 
 ## P11
 
