@@ -64,7 +64,7 @@ The base clause ancestor(A, D) :- parent(A, D) is tried first, so parent(tom, X)
 
 ## P09
 
-Write one to three sentences here. Name the rule that fixes each field.
+The recursive clause of ancestor_r comes first, so the query runs parent(tom, P) and ancestor_r(P, X) before it reads any direct parent fact. P=liz fails because liz has no children, and P=bob goes down to ann and pat, whose own base clauses give sue and jim first, which are first and second. The base clause of bob then gives ann and pat, and the base clause of tom gives liz and bob, so the order is sue, jim, ann, pat, liz, bob and the count is 6.
 
 ## P10
 
