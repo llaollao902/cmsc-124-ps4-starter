@@ -36,15 +36,15 @@ The goal scans the parent facts from top to bottom, and a fact matches only if t
 
 ## P02
 
-The goal has no variables, so an answer is just true or false. Scanning from top to bottom, parent(tom, liz) fails because bob can't unify with liz (since they are different atoms), and parent(tom, bob) matches, so first is true. On backtracking, the remaining parent facts start with the argument bob, pat, or ann, which can't unify with tom, so there is no second and the count is 1.
+The goal has no variables, so an answer is just true or false. Scanning the knowledge base from top to bottom, parent(tom, liz) fails because bob can't unify with liz (since they are different atoms), and parent(tom, bob) matches, so first is true. On backtracking, the remaining parent facts start with the argument bob, pat, or ann, which can't unify with tom, so there is no second and the count is 1.
 
 ## P03
 
-Write one to three sentences here. Name the rule that fixes each field.
+The goal scans the parent facts from top to bottom, and a fact matches only if the atom tom unifies with its second argument, since the variable X can unify with any atom in the first argument. The second arguments of the parent facts are liz, bob, ann, pat, jim, and sue, and none of them can unify with tom, so there are no matching facts. So the first is false because the query has no answer at all, second is none because there is no other answer to finc, which makes the count 0.
 
 ## P04
 
-Write one to three sentences here. Name the rule that fixes each field.
+The goals are tried from left to right, and = is unification, so nothing is computed. X = f(Y, a) binds X to the term f(Y, a) with Y still unbound inside it. Y = b then binds Y to b, and since Y is part of the term X holds, X becomes f(b, a), so first is X=f(b,a),Y=b. Neither goal has another clause to try, so there is no second answer and the count is 1.
 
 ## P05
 
