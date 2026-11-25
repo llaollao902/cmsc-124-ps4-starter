@@ -84,11 +84,11 @@ The base clause len([], 0) can't unify with a nonempty list, so len([a, b, c], N
 
 ## P14
 
-Write one to three sentences here. Name the rule that fixes each field.
+The base clause join([], L, L) is tried first and unifies with the query, binding X to [] and Y to [1, 2], so first is X=[],Y=[1,2]. On backtracking, the recursive clause binds X to [1|T] and calls join(T, Y, [2]), whose base clause gives X=[1],Y=[2] as the second answer, and whose recursive clause calls join(T2, Y, []) to give X=[1,2],Y=[] as the third. The recursive clause can't unify its third argument [H|R] with [], so no clauses are left and the count is 3.
 
 ## P15
 
-Write one to three sentences here. Name the rule that fixes each field.
+The goals are tried from left to right, so X > 2 runs first while X is still unbound. The comparison > needs both operands bound to numbers, so Prolog throws an instantiation error before elem(X, [1, 2, 3]) is ever tried. Since the query throws an error, first, second, and count are all error.
 
 ## P16
 
