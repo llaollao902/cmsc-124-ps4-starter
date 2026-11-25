@@ -64,8 +64,10 @@ rev([H|T], R) :-
 
 % last_of(List, X): X is the last element of List. The empty list has no
 % last element, so last_of([], X) must fail.
-last_of(_, _) :-
-    throw(not_implemented(last_of/2)).
+
+last_of([X], X).                % base case: a one-element list's last element is that element
+last_of([_|T], X) :-            % recursive case: the head is not the last element,
+    last_of(T, X).              % so X is the last element of the tail T
 
 %%% R3 -- the graph.
 
