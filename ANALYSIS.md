@@ -1,8 +1,3 @@
-# The Search and the Stack
-
-Replace this paragraph after your checks pass. Paste the output of `./trace`
-for one case. Then answer three questions about it.
-
 == trace P08 ==
 Call: ancestor(tom,X)
   Call: parent(tom,X)
