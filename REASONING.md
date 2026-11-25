@@ -48,7 +48,7 @@ The goals are tried from left to right, and = is unification, so nothing is comp
 
 ## P05
 
-Write one to three sentences here. Name the rule that fixes each field.
+The goal is just a unification between two compound terms and both terms have the functor f and arity 2, so the arguments are unified pairwise: X binds to a, and b unifies with Y by binding Y to b. The bindings are consistent, so first is X=a,Y=b. Unification offers no other way to match, so there is no second answer and the count is 1.
 
 ## P06
 
