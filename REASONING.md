@@ -32,11 +32,11 @@ nothing and the search ends after one answer.
 
 ## P01
 
-The goal scans the parent facts from top to bottom, and a fact matches only if the atom tom unifies with its first argument. parent(tom, liz) matches first, binding X to liz (hence, X=liz for first), and on backtracking parent(tom, bob) matches next, binding X to bob (hence, X=bob for second). The other parent facts start with the argument bob, pat, or ann, which can't unify with tom, so no matching fact is left after bob and the count is 2 before false.
+The goal scans the parent facts from top to bottom, and a fact matches only if the atom tom unifies with its first argument. parent(tom, liz) matches first, binding X to liz (hence, X=liz for first), and on backtracking parent(tom, bob) matches next, binding X to bob (hence, X=bob for second). The other parent facts start with the argument bob, pat, or ann, which can't unify with tom, so no matching fact is left after parent(tom, bob) and the count is 2 before false.
 
 ## P02
 
-Write one to three sentences here. Name the rule that fixes each field.
+The goal has no variables, so an answer is just true or false. Scanning from top to bottom, parent(tom, liz) fails because bob can't unify with liz (since they are different atoms), and parent(tom, bob) matches, so first is true. On backtracking, the remaining parent facts start with the argument bob, pat, or ann, which can't unify with tom, so there is no second and the count is 1.
 
 ## P03
 
