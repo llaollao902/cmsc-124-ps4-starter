@@ -92,5 +92,5 @@ The goals are tried from left to right, so X > 2 runs first while X is still unb
 
 ## P16
 
-Write one to three sentences here. Name the rule that fixes each field.
+The goals are tried from left to right, so elem(X, [1, 2, 3]) runs first and binds X to a number before X > 2 is checked. X=1 and X=2 fail the comparison, so the search backtracks into elem each time, and X=3 passes, so first is X=3. No elements are left after 3, so there is no second answer and the count is 1.
 
