@@ -76,7 +76,7 @@ The first clause of reach calls reach(a, Z) before it reads any edge fact, so ea
 
 ## P12
 
-Write one to three sentences here. Name the rule that fixes each field.
+The base clause of reach_r(a, d) tries edge(a, d), which fails, so the recursive clause reads edge(a, b) and calls reach_r(b, d), where the base clause edge(b, d) also fails, so it reads edge(b, c) and calls reach_r(c, d), whose base clause edge(c, d) succeeds, so first is true. On backtracking, reach_r(c, d) tries its recursive clause, reads edge(c, a), and calls reach_r(a, d) again, which repeats the same path and finds true again, so second is true. Because a, b, and c form a cycle, every lap finds another true and the search never runs out of answers, so the count is unbounded.
 
 ## P13
 
