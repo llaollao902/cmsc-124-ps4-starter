@@ -80,7 +80,7 @@ The base clause of reach_r(a, d) tries edge(a, d), which fails, so the recursive
 
 ## P13
 
-Write one to three sentences here. Name the rule that fixes each field.
+The base clause len([], 0) can't unify with a nonempty list, so len([a, b, c], N) uses the recursive clause and calls len([b, c], M1), which calls len([c], M2), which calls len([], M3), where the base clause binds M3 to 0. As the calls return, is evaluates M + 1 at each level, so M2 is 0+1=1, M1 is 1+1=2, and N is 2+1=3, and is works because each M is already bound by the recursive call that came before it. Each call matches only one clause, so there is no other answer to find, so first is N=3, second is none, and the count is 1.
 
 ## P14
 
