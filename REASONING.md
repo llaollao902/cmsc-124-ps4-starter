@@ -56,7 +56,7 @@ It is just basically a unification between two atoms a and b. Two different atom
 
 ## P07
 
-Write one to three sentences here. Name the rule that fixes each field.
+The body of the query grandparent(tom, X) becomes parent(tom, P) and parent(P, X), tried from left to right. P binds to liz first, but parent(liz, X) fails since no parent fact starts with liz, so the search backtracks and rebinds P to bob, where parent(bob, X) matches ann first (X=ann) and then pat (X=pat) on backtracking. No bob or tom facts are left after that, so the count is 2 before false.
 
 ## P08
 
