@@ -81,10 +81,15 @@ The first match for X is parent(pat, jim). X binds to pat, and the first clause 
 
 Recursive rule says that d can be reached from a if Z can be reached from a, and d can be reached from Z, and if there is an edge from a to d. On the first clause: reach (a, Z1), edge (Z1, d), and reach (a, Z1) gives reach (a, Z2), edge (Z2, Z1). The pattern of endless Zs continue since there's no bound to return the recursion to its base clause, it won't give an answer and will continue being stuck in clause 1.
 
+## Correction for reach(a, d)
+I predicted error for count instead of unbounded which is what was printed. Didn't check that count could hold an unbounded value
 
 ## P12
 
 First clause checks edge(a, d), which matches nothing. Second clause follows edge(a, b), then recurses on reach_r(b,d), following edge (b, c), and recurses on reach_r(c,d). Finally, first clause finds edge(c,d), so it answers true. 
+
+## Correction for reach_r(a, d):
+Predicted none for second, 1 for count when it should be true and unbounded. Assumed directly from the first answer, but in deeper traces it cycles back to unbounded.
 
 ## P13
 
@@ -98,7 +103,9 @@ The first clause makes X = [], Y = [1,2], L = [1,2] also. The second clause take
 
 X isn't bound somewhere before X > 2 was called. The rules need binding before anything, so there's an error.
 
+## Correction for X > 2, elem(X, [1, 2, 3])
+Put none in the answers when it should have been error. Didn't double check terms
+
 ## P16
 
 X is unbound, the first clause recurses to each of the elements in the list. Going through X=1 and X=2, only X=3 satisfies the condition and is returned.
-
