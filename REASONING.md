@@ -60,7 +60,7 @@ The body of the query grandparent(tom, X) becomes parent(tom, P) and parent(P, X
 
 ## P08
 
-Write one to three sentences here. Name the rule that fixes each field.
+The base clause ancestor(A, D) :- parent(A, D) is tried first, so parent(tom, X) makes X binds to liz and then bob (X=liz and X=bob), which are first and second. The recursive clause then runs parent(tom, P) and ancestor(P, X), where P=liz fails because liz has no children, and P=bob gives ann and pat from its base clause, then sue through ann and jim through pat. The full order is liz, bob, ann, pat, sue, jim, so the count is 6.
 
 ## P09
 
