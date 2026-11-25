@@ -54,6 +54,9 @@ I didn't include Y=b, the prompt printed it with X in the first answer. I interp
 
 The two sides'arguments can be paired under unification so X = a and Y = b.
 
+## Correction for X = f(Y, a), Y = b
+I mistakenly put Y=b in the second answer and the prompt printed them both in the first.
+
 ## P06
 
 a and b are different atoms, and different atoms can't be unified by any rule, so the query gives false.
