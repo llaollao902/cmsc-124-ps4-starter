@@ -72,7 +72,7 @@ The base clause of ancestor is tried first, and parent(X, jim) matches parent(pa
 
 ## P11
 
-Write one to three sentences here. Name the rule that fixes each field.
+The first clause of reach calls reach(a, Z) before it reads any edge fact, so each call opens the same clause again. Nothing ever fails, so nothing backtracks to the base clause below it. No answer is ever produced, so first, second, and count are all unbounded.
 
 ## P12
 
