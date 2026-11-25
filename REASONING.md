@@ -46,6 +46,10 @@ Parent facts are scanned in source order, none of them have X first. The query r
 
 X is first unified with f(Y,a), and Y is unbound. The second part binds Y to b, so X is now f(b,a). Unification, then nothing else, so the query returns X = f(b,a).
 
+## Correction for X = f(Y, a), Y = b
+
+I didn't include Y=b, the prompt printed it with X in the first answer. I interpreted the binding and unification in one step, melding Y and b together.
+
 ## P05
 
 The two sides'arguments can be paired under unification so X = a and Y = b.
